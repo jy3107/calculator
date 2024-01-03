@@ -1,0 +1,110 @@
+* {
+    font-family:monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bgwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    display: flex;
+    background-color: rgb(246, 86, 113);
+    width: 100%;
+    max-width: 375px;
+    min-height: 530px;
+    border-radius: 1.5rem;
+    flex-direction: column;
+    overflow: hidden;
+
+    border-style: solid;
+    border-width: 0.4rem;
+    border-color: rgb(255, 176, 235);
+}
+
+.display {
+    display: flex;
+    min-height: 170px;
+    padding: 1.5rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    flex: 1 1 0%;
+}
+
+.display .input {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.display .result {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.display .operator {
+    color: rgb(237, 221, 255);
+}
+
+.display .brackets,
+.display .percent {
+    color: rgb(211, 147, 243);
+}
+
+.keys {
+    display: grid;
+    background-color: rgb(255, 134, 154);
+    padding: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1rem;
+    box-shadow: 0px -2px 16px rgba(255, 255, 255, 0.2);
+
+    border-top-width: 0.4rem;
+    border-style: solid;
+    border-color: rgb(249, 153, 225);
+}
+
+.keys .key {
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    height: 0;
+    padding-top: 100%;
+    background-color: rgb(254, 120, 142);
+    border-radius: 1rem;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.keys .key span {
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.keys .key:hover {
+    box-shadow: inset 0px 0px 8px rgba(134, 0, 83, 0.2);
+}
+
+.keys .key.action span{
+    color: rgb(243, 231, 255);
+}
+
+.keys .key.operator span{
+    color: rgb(240, 173, 255);
+}
