@@ -52,12 +52,12 @@
 }
 
 .display .operator {
-    color: rgb(237, 221, 255);
+    color: rgb(240, 173, 255);
 }
 
 .display .brackets,
 .display .percent {
-    color: rgb(211, 147, 243);
+    color: rgb(243, 231, 255);
 }
 
 .keys {
